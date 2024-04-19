@@ -1,0 +1,1 @@
+add_library(libary parsing.h parsing.cpp pugixml.cpp pugiconfig.hpp pugixml.hpp valute.cpp valute.h)
