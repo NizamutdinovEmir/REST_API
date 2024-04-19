@@ -85,16 +85,14 @@ void setup(int argc, char** argv , data_base& Data_base) {
                             double value = std::stod(valute.child_value("VunitRate"));
                             //std::cout << "CharCode: " << charCode << ", Name: " << name << ", Value: " << value * (Data_base.nominal_valute) << std::endl;
                             std::cout << Data_base.name_valute << " " << Data_base.nominal_valute << " " << Data_base.Date_Current << " " <<  value * (Data_base.nominal_valute);
-                            if (Data_base.check_file_name) {
-                                fout << Data_base.name_valute << " " << Data_base.nominal_valute << " " << Data_base.Date_Current << " " <<  value * (Data_base.nominal_valute) <<  std::endl;
-                            }
+                            fout << Data_base.name_valute << " " << Data_base.nominal_valute << " " << Data_base.Date_Current << " " <<  value * (Data_base.nominal_valute) <<  std::endl;
                         }
                     }
                 } else {
-                    std::cerr << "error1" << std::endl;
+                    std::cerr << "Ошибка с XML файлом" << std::endl;
                 }
             } else {
-                std::cerr << "error2: " << response.status_code << std::endl;
+                std::cerr << "Сайт не отвечает: " << response.status_code << std::endl;
             }
     }
 }
